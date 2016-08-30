@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/bg_action_bar">
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:text="Product Detail"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_below="@+id/action_bar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"/>
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/line_break"
+                android:layout_alignParentLeft="true"
+                app:ci_drawable="@color/colorAccent"
+                android:layout_alignParentStart="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_border"
+                android:layout_below="@+id/viewPager"
+                android:id="@+id/line_break" />
+
+            <include layout="@layout/product_info"
+                android:layout_below="@+id/line_break"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:id="@+id/product_info"/>
+
+            <View
+                android:id="@+id/product_break"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="@color/gray_border"
+                android:layout_below="@+id/product_info"/>
+
+            <include layout="@layout/store_info"
+                android:id="@+id/store_block"
+                android:layout_below="@+id/product_break"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"/>
+
+            <View
+                android:id="@+id/store_break"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="@color/gray_border"
+                android:layout_below="@+id/store_block"/>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp">
+        <CheckBox
+            android:id="@+id/add_to_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:enabled="false"
+            android:background="@drawable/heart_selection"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"
+            android:text="Add To Favorites"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="7dp">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="7dp"
+        card_view:cardCornerRadius="4dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.free.savcrm.view.SquareImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/miband01"
+                android:scaleType="centerCrop"
+                android:id="@+id/item" />
+            <CheckBox
+                android:id="@+id/cb_heart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:background="@drawable/heart_selection"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/item"
+                android:layout_alignEnd="@+id/item" />
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_below="@+id/item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:text="Mi Band 2"/>
+            <TextView
+                android:id="@+id/item_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_name"
+                android:textSize="17sp"
+                android:layout_marginLeft="7dp"
+                android:textColor="@color/gray_border"
+                android:text="566807.0"
+                />
+
+            <View
+                android:id="@+id/line_break"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/item_price"
+                android:background="@color/gray_border"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="2dp"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatar"
+                android:layout_below="@+id/line_break"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/store"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/store_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store A"
+                android:textSize="15sp"
+                android:textColor="@color/gray_border"
+                android:layout_below="@+id/line_break"
+                android:layout_toRightOf="@+id/avatar"
+                android:layout_marginTop="7dp"/>
+
+            <TextView
+                android:id="@+id/date_updated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 minute ago"
+                android:textSize="14sp"
+                android:textColor="@color/gray_border"
+                android:layout_below="@+id/store_name"
+                android:layout_toRightOf="@+id/avatar"
+                android:layout_marginTop="3dp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

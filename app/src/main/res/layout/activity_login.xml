@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/bg_action_bar">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:text="Done"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/toggle_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_below="@+id/action_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_radio_group"
+        android:orientation="horizontal"
+        android:padding="1dp">
+
+        <ToggleButton
+            android:id="@+id/toggle_login"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/toggle_height"
+            android:background="@drawable/bg_login_radio_button"
+            android:button="@null"
+            android:checked="true"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:textAllCaps="false"
+            android:textColor="@drawable/login_text_color"
+            android:textOff="Log in"
+            android:textOn="Log in"
+            android:textSize="17sp" />
+
+        <ToggleButton
+            android:id="@+id/toggle_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/toggle_height"
+            android:background="@drawable/bg_sign_up_radio_button"
+            android:button="@null"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:textAllCaps="false"
+            android:textColor="@drawable/login_text_color"
+            android:textOff="Sign up"
+            android:textOn="Sign up"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/info_input_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggle_button_layout">
+
+        <include
+            android:id="@+id/login_block"
+            layout="@layout/login_block"/>
+
+        <include
+            android:id="@+id/sign_up_block"
+            layout="@layout/sign_up_block"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_input_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/privacy_policy"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+</RelativeLayout>

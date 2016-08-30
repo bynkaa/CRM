@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/login_in_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_below="@+id/avatar"
+    android:layout_margin="10dp"
+    android:padding="7dp"
+    android:background="@drawable/bg_login_radio_group"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp">
+        <TextView
+            android:layout_width="@dimen/label_width"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="User Name" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:background="@null"
+            android:singleLine="true"
+            android:hint="Choose a username"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_border"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp">
+        <TextView
+            android:layout_width="@dimen/label_width"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="Password" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:background="@null"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:hint="Choose a password"/>
+
+    </LinearLayout>
+
+</LinearLayout>

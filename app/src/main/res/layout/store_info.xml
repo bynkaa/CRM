@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/store_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="STORE INFORMATION"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/store_image"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/store_information"
+        android:src="@drawable/store"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/store_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/bg_action_bar"
+        android:textStyle="bold"
+        android:text="store number 5"
+        android:layout_alignTop="@+id/store_image"
+        android:layout_toRightOf="@+id/store_image"
+        android:layout_toEndOf="@+id/store_image"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:text="Rate: 4.5/5.0"
+        android:layout_alignBottom="@+id/store_image"
+        android:layout_toRightOf="@+id/store_image"
+        android:layout_toEndOf="@+id/store_image"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/store_address"
+        android:layout_below="@+id/store_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/location"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:text="6 Eu Tong Sen Street, Singapore 059817"/>
+
+    <TextView
+        android:id="@+id/view_on_map"
+        android:layout_below="@id/store_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="16sp"
+        android:textColor="@color/bg_action_bar"
+        android:text="View on Map"/>
+
+    <TextView
+        android:id="@+id/open_in_map"
+        android:layout_below="@id/store_address"
+        android:layout_toRightOf="@+id/view_on_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="16sp"
+        android:textColor="@color/bg_action_bar"
+        android:text="Open in Maps"/>
+</RelativeLayout>

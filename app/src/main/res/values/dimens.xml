@@ -1,0 +1,9 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="flash_content_width">275dp</dimen>
+    <dimen name="action_bar_height">47dp</dimen>
+    <dimen name="toggle_height">35dp</dimen>
+    <dimen name="label_width">97dp</dimen>
+</resources>

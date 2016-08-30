@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SAVCRM</string>
+    <string name="facebook_app_id">779197918875714</string>
+    <string name="flash_login_message">or log in with social network account</string>
+    <string name="login_with_email_label">Sign up or Log in with Email</string>
+    <string name="privacy_policy">By Proceeding, you agree to\n our Terms of Service and Privacy Policy</string>
+    <string name="product_info">The new version of Mi Band 2 has an OLED-display and a touch panel, which will make more information available to you. You can find out the detailed information about covered distance, time, heart rate, body temperature and many other useful data with just one touch and finger. Smart technology responds to your movements. As soon as you raise your hand, the bracelet will display the current time - easy and conveniently. Fitness tracker and watch - two in one.</string>
+</resources>

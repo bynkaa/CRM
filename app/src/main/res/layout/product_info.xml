@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="Mi Band 2[5]"/>
+
+    <TextView
+        android:id="@+id/date_updated"
+        android:layout_below="@+id/product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/clock"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="10dp"
+        android:text="32 min ago"/>
+
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_below="@+id/date_updated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/price"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="10dp"
+        android:text="645419.0"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/product_price"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+        <ImageView
+            android:id="@+id/ivInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/info"/>
+
+        <TextView
+            android:id="@+id/product_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:layout_toRightOf="@+id/ivInfo"
+            android:layout_toEndOf="@+id/ivInfo"
+            android:text="@string/product_info"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
